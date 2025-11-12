@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive JS </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrapper" role="banner">
+    <h1>Interactive JS Demo </h1>
+    <p>
+      This page includes: <strong>Trivia Quiz</strong>, <strong>Cheer Clicker</strong>,
+      and <strong>Audio Controls</strong>.
+    </p>
+    
+  </header>
+
+  <!-- 1) TRIVIA / QUIZ -->
+  <section class="wrapper card" aria-labelledby="quiz-title">
+    <h2 id="quiz-title">Trivia Quiz</h2>
+    <p>Answer the question. We track your score.</p>
+
+    <div id="quizBox" class="quiz">
+      <div id="question" class="question" aria-live="polite"></div>
+      <div id="answers" class="answers"></div>
+
+      <div class="row">
+        <button id="nextBtn" class="btn" disabled>Next question</button>
+        <div class="score" aria-live="polite" id="scoreBox">Score: 0/0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) CLICKER / COUNTER -->
+  <section class="wrapper card" aria-labelledby="clicker-title">
+    <h2 id="clicker-title">Cheer Clicker</h2>
+    <p>Cheer for your team or pet! Space/Enter works too when focused.</p>
+
+    <div class="row">
+      <button id="cheerBtn" class="btn btn-accent" aria-describedby="count">🎉 Cheer!</button>
+      <button id="resetBtn" class="btn">Reset</button>
+      <div id="count" class="score" aria-live="polite">Count: 0</div>
+    </div>
+  </section>
+
+  <!-- 3) MEDIA CONTROLLER -->
+  <section class="wrapper card" aria-labelledby="media-title">
+    <h2 id="media-title">Audio Controls</h2>
+    <p>Play/pause and change speed. No autoplay.</p>
+
+    <audio id="audio" preload="metadata" aria-label="Sample audio">
+      <!-- Replace with a valid file to test -->
+      
+      <audio id="audio" preload="metadata" aria-label="Sample audio">
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+</audio>
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="row">
+      <button id="playPause" class="btn">▶ Play</button>
+      <label for="speed">Speed</label>
+      <select id="speed" class="select">
+        <option value="0.75">0.75×</option>
+        <option value="1" selected>1.0×</option>
+        <option value="1.25">1.25×</option>
+        <option value="1.5">1.5×</option>
+        <option value="2">2.0×</option>
+      </select>
+    </div>
+    <div class="live" id="mediaStatus" aria-live="polite"></div>
+  </section>
+
+  <footer class="wrapper" role="contentinfo">
+    <p>Built by Youssef kamidi.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
